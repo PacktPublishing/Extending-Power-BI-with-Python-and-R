@@ -77,21 +77,23 @@ df = pd.DataFrame(data=packages_rows,columns=column_names)
 #----------------------------------------------------
 # Write an environment YAML file using the dataframe
 #----------------------------------------------------
+
+# Remove the unused Link column
 packages_df = df.drop('Link', axis=1)
 
 packages_version_lst = packages_df.agg('=='.join, axis=1).values.tolist()
 
 # Now let's write a YAML file using the scraped info about packages
-packages_dict = [
-    {'name': 'pbi_visuals_env'},
-    {
-        'dependencies': [
-            'python==%s' % python_ver_str,
-            'pip',
-            {'pip': packages_version_lst}
-        ]
-    }
-]
+packages_dict = {
+    'name': 'pbi_visuals_env',
+
+    'dependencies': [
+        'python==%s' % python_ver_str,
+        'pip',
+        {'pip': packages_version_lst}
+    ]
+    
+}
 
 print( yaml.dump(packages_dict, default_flow_style=False) )
 
