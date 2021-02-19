@@ -6,18 +6,11 @@ library(timetk)
 # by the tidyr package
 data("population")
 
-# Let's have a look at the tibble
-population
-
-# Let's have a look at the countries
-population %>% 
-  distinct(country) %>% 
-  pull()
-
 # Let's nest the 'year' and 'population' data
 # into another tibble for each country
 nested_population_tbl <- population %>% 
   tidyr::nest( demographic_data = -country )
+
 
 # Let's try to plot the population growth time series for Sweden
 selected_country <- "Sweden"
@@ -27,11 +20,11 @@ nested_population_tbl %>%
   # Get the row related to the selected country
   filter( country == selected_country ) %>% 
   
-  # Get the content of 'demografic_data' for
+  # Get the content of 'demographic_data' for
   # that row. Note that it is a list
   pull( demographic_data ) %>%
   
-  # Extract the 'demografic_data' tibble from
+  # Extract the 'demographic_data' tibble from
   # the list (it has only 1 element)
   pluck(1) %>% 
   
@@ -73,6 +66,15 @@ nested_population_plots_tbl <- nested_population_tbl %>%
   select( country, plot )
 
 
+# Now extract the list of plots from the nested tibble.
+# The index of list items corresponds to the country_id values
+# into the selected countries tibble.
+plot_lst <- nested_population_plots_tbl$plot
+
+# Serialize the list of plots
+saveRDS(plot_lst, "plot_lst.rds")
+
+
 # Let's build a tibble having the name of the selected countries as
 # a column and then their position index (alias row number) as a
 # column.
@@ -84,18 +86,5 @@ selected_countries_tbl <- nested_population_plots_tbl["country"] %>%
   # Cast the 'country_id' column as integers.
   mutate( country_id = as.integer(country_id) )
 
-
 # Serialize the selected countries tibble
 saveRDS(selected_countries_tbl, "selected_countries_tbl.rds")
-
-
-# Now extract the list of plots from the nested tibble.
-# The index of list items corresponds to the country_id values
-# into the selected countries tibble.
-plot_lst <- nested_population_plots_tbl$plot
-
-# Serialize the list of plots
-saveRDS(plot_lst, "plot_lst.rds")
-
-
-

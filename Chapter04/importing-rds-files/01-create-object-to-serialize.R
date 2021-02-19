@@ -10,7 +10,13 @@ population
 
 # Let's have a look at the countries
 population %>% 
+  
+  # Get only the distinct values of 'country'
+  # The result is still a tibble of one column
   distinct(country) %>% 
+  
+  # "Detach" the distinct column from the tibble
+  # and make it a vector
   pull()
 
 # Let's nest the 'year' and 'population' data
