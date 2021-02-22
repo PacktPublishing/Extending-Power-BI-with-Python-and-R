@@ -43,6 +43,4 @@ str_unpickled = toUnpickle(str_pickled_byte_string)
 mng = plt.get_current_fig_manager()
 mng.figure = str_unpickled
 
-plt.figure = str_unpickled
-
-str_unpickled.show()
+plt.show()
