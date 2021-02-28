@@ -15,38 +15,42 @@ str_dice <- function(s, width) {
 }
 
 
-project_folder <- "D:\\LZavarella\\OneDrive\\MVP\\Packt Book\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-rds-files"
+project_folder <- "D:\\LZavarella\\OneDrive\\MVP\\PacktBook\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-rds-files"
 
 # Deserialize the plots list.
-plot_lst <- readRDS( file.path(project_folder, "plot_lst.rds") )
+plots_lst <- readRDS( file.path(project_folder, "plots_lst.rds") )
 
 # Deserialize the selected countries tibble.
-selected_countries_tbl <- readRDS( file.path(project_folder, "selected_countries_tbl.rds") )
+selected_countries_df <- data.frame( country_name = names(plots_lst) )
 
 # Apply to each element of the plots list the function to_string_of_bytes.
 # You'll have a list of serialized plots in string of bytes.
-plot_str_lst <- lapply(plot_lst, to_string_of_bytes)
+plots_str_lst <- lapply(plots_lst, to_string_of_bytes)
 
-# Split the string in chunks of 10K, in order to avoid the string length limitations in Power BI import
-plot_str_vec_lst <- lapply(plot_str_lst, str_dice, width = 10000)
+# Split each string of bytes in chunks of 10K, in order to avoid the string length limitations in the R Visual
+plots_str_vec_lst <- lapply(plots_str_lst, str_dice, width = 10000)
 
 
-
+# Create an empty dataframe
 plots_df <- data.frame()
 
-i <- 1
-
-for (plt_vec in plot_str_vec_lst) {
+# For each country name in the list of string of bytes chunks...
+for (country_name in names(plots_str_vec_lst)) {
   
+  # ...extract the list of chunks
+  plt_vec = plots_str_vec_lst[[country_name]]
+  
+  # and fill it into a temporary small dataframe
   tmp_df <- data.frame(
-    country_id = rep(i, length(plt_vec)),
+    country_name = rep(country_name, length(plt_vec)),
     chunk_id = seq(1,length(plt_vec),1),
     plot_str = plt_vec,
     
     stringsAsFactors = FALSE
   )
   
+  # Then append the temporary dataframe
+  # to the main one (rbind = rows bind)
   plots_df <- rbind(plots_df, tmp_df)
   
-  i <- i + 1  
 }

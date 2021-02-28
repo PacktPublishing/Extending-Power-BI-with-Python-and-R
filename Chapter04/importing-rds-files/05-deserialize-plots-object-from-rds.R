@@ -1,14 +1,14 @@
 
 library(tidyverse)
 
-project_folder <- "D:\\LZavarella\\OneDrive\\MVP\\Packt Book\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-rds-files"
+project_folder <- "C:/<your>/<absolute>/<project_folder>/<path>"
 
 
 # Deserialize the plots list.
 deserialized_lst <- readRDS( file.path(project_folder, "plot_lst.RDS") )
 
-# Deserialize the selected countries tibble.
-selected_countries_tbl <- readRDS( file.path(project_folder, "selected_countries_tbl.rds") )
+# Get the country names from the 'keys' of the plots named list
+selected_countries_tbl <- names(deserialized_lst)
 
 
 # Select a country, get its country id from the tibble.

@@ -21,11 +21,6 @@ def toUncut(obj):
     return "".join(obj)
 
 
-# # For debug purposes
-# # In Power BI a single plot is selected using a slicer
-# dataset = plots_df.loc[ plots_df['country_name'] == "France" ]
-
-
 dataset = dataset.sort_values(['chunk_id'], ascending=[True])
 dataset = dataset.reset_index(drop=True)
 

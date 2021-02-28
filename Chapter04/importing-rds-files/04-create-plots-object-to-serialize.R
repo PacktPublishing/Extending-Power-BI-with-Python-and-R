@@ -66,25 +66,14 @@ nested_population_plots_tbl <- nested_population_tbl %>%
   select( country, plot )
 
 
-# Now extract the list of plots from the nested tibble.
-# The index of list items corresponds to the country_id values
-# into the selected countries tibble.
-plot_lst <- nested_population_plots_tbl$plot
+# Now extract the named list of plots for each country from the nested tibble.
+plots_lst <- nested_population_plots_tbl %>% 
+  
+  # converts two-column data frames to a named list, using
+  # the first column as name and the second column as value
+  deframe()
+
 
 # Serialize the list of plots
-saveRDS(plot_lst, "plot_lst.rds")
+saveRDS(plots_lst, "plots_lst.rds")
 
-
-# Let's build a tibble having the name of the selected countries as
-# a column and then their position index (alias row number) as a
-# column.
-selected_countries_tbl <- nested_population_plots_tbl["country"] %>% 
-  
-  # Transform the row numbers (chars) in the 'country_id' column.
-  rownames_to_column( var = "country_id" ) %>% 
-  
-  # Cast the 'country_id' column as integers.
-  mutate( country_id = as.integer(country_id) )
-
-# Serialize the selected countries tibble
-saveRDS(selected_countries_tbl, "selected_countries_tbl.rds")
