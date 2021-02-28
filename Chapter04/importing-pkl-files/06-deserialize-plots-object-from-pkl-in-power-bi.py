@@ -51,10 +51,16 @@ for country in pickled_plots_int_str_dict:
 
 plots_df_lst = []
 
+# For each country name taken from the pickled_plots_int_str_chopped_dict...
 for country in pickled_plots_int_str_chopped_dict:
+
+    # ...get the chops list for the current country
     chops_lst = pickled_plots_int_str_chopped_dict[country]
+    # get the number of chunks contained into the list
     num_chops = len(chops_lst)
 
+    # create a temporary dataframe containing the country name, an integer index
+    # counting the chunks and the chops list strings content
     tmp_data = {
         'country_name': [country] * num_chops,
         'chunk_id': list(range(1, num_chops+1)),
@@ -63,10 +69,12 @@ for country in pickled_plots_int_str_chopped_dict:
 
     tmp_df = pd.DataFrame(tmp_data, columns = ['country_name','chunk_id','plot_str'])
 
+    # append the temporary dataframe to the plots_df_lst list of dataframes
     plots_df_lst.append(tmp_df)
 
+# Merge all the plots_df_lst dataframes into the plots_df dataframe
 plots_df = pd.concat(plots_df_lst, ignore_index=True)
 
-
+# Create also the country names dataframe
 selected_countries_df = pd.DataFrame( pickled_plots_int_str_chopped_dict.keys(), columns = ['country_name'])
 
