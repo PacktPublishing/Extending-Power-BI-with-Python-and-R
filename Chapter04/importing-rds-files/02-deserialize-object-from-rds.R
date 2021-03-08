@@ -16,7 +16,7 @@ sweden_population_tbl <- deserialized_tbl %>%
   
   # Get the content of 'demographic_data' for
   # that row. Note that it is a list
-  pull( demografic_data ) %>%
+  pull( demographic_data ) %>%
   
   # Extract the 'demographic_data' tibble from
   # the list (it has only 1 element)

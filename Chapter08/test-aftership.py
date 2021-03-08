@@ -31,3 +31,17 @@ trck_id = trck_res["tracking"]["id"]
 tracking = aftership.tracking.get_tracking(tracking_id=trck_id)
 
 aftership.tracking.get_last_checkpoint(tracking_id=trck_id)
+
+
+# How to get a list of trackings
+
+# import aftership
+# aftership.api_key = "xxx"
+# data = aftership.tracking.list_trackings({
+# "limit": "200",
+# "page": "1",
+# "created_at_min": "2021-01-10T13:00:06",
+# "created_at_max": "2021-12-14T23:00:06",
+# "tag": "InfoReceived,InTransit,OutForDelivery,AttemptFail,Delivered,AvailableForPickup,Exception"
+# })
+# print(data)
