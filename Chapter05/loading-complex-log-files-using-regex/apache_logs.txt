@@ -8896,7 +8896,7 @@
 157.55.33.15 - - [20/May/2015:12:05:34 +0000] "GET /robots.txt HTTP/1.1" 200 - "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
 46.118.127.106 - - [20/May/2015:12:05:26 +0000] "GET /presentations/logstash-scale11x/images/ahhh___rage_face_by_samusmmx-d5g5zap.png HTTP/1.1" 200 175208 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
 46.118.127.106 - - [20/May/2015:12:05:48 +0000] "GET /files/fastest_sites/ HTTP/1.1" 200 1436 "-" "portscout/0.8.1"
-46.118.127.106 - - [20/May/2015:12:05:17 +0000] "GET /scripts/grok-py-test/configlib.py HTTP/1.1" 200 235 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html
+46.118.127.106 - - [20/May/2015:12:05:17 +0000] "GET /scripts/grok-py-test/configlib.py HTTP/1.1" 200 235 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html"
 180.76.5.152 - - [20/May/2015:12:05:25 +0000] "GET /robots.txt HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 5.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2"
 81.198.20.11 - - [20/May/2015:12:05:59 +0000] "GET /blog HTTP/1.0" 200 37936 "-" "-"
 81.198.20.11 - - [20/May/2015:12:05:16 +0000] "HEAD /favicon.ico HTTP/1.0" 200 - "-" "-"
