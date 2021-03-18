@@ -4,12 +4,16 @@ library(tibble)
 library(namedCapture)
 
 
-# Define a regex for the information (variables) contained in each row of the log
+# # For debugging purpose
+# library(readxl)
+# dataset <- read_xlsx(r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter05\OrderNotes.xlsx}')
 
+
+# Define a regex for the information (variables) contained in each row of the log
 currency_regex  <- r'{(?:EUR|€)}'
 amount_regex    <- r'{(?P<RefundAmount>\d{1,}\.?\d{0,2})}'
 reason_regex    <- r'{(?P<RefundReason>.*?)}'
-date_regex      <- r'{(?P<RefundDate>\d{2}[/-]\d{2}[/-]\d{4})}'
+date_regex      <- r'{(?P<RefundDate>\d{2}[\-\/]\d{2}[\-\/]\d{4})}'
 separator_regex <- r'{(?:\s+)?-?(?:\s+)?}'
 
 

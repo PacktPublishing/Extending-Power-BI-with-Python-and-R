@@ -2,12 +2,15 @@ import pandas as pd
 import regex
 
 
-# Define a regex for the information (variables) contained in each row of the log
+# # For debugging purpose
+# # To load an xlsx file in Python, you need to install also the package: openpyxl
+# dataset = pd.read_excel (r'D:\<your>\<local>\<path>\OrderNotes.xlsx')
 
+# Define a regex for the information (variables) contained in each row of the log
 currency_regex  = r'(?:EUR|€)'
 amount_regex    = r'(?P<RefundAmount>\d{1,}\.?\d{0,2})'
 reason_regex    = r'(?P<RefundReason>.*?)'
-date_regex      = r'(?P<RefundDate>\d{2}[/-]\d{2}[/-]\d{4})'
+date_regex      = r'(?P<RefundDate>\d{2}[\-\/]\d{2}[\-\/]\d{4})'
 separator_regex = r'(?:\s+)?-?(?:\s+)?'
 
 
