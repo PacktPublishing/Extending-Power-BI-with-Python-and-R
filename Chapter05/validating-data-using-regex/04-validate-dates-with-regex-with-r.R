@@ -1,8 +1,6 @@
 library(dplyr)
 library(stringr)
 
-df <- dataset
-
 # You can choose the format of dates you can find in your dataset.
 # 
 # The possible choices are: 'dd-mm-yyyy', 'mm-dd-yyyy' and 'yyyy-mm-dd'.
