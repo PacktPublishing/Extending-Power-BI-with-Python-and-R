@@ -10,5 +10,5 @@ pattern <- str_glue(
   '^({regex_local_part})@({regex_domain_name}|{regex_domain_ip_address})$'
 )
 
-df <- df %>% 
+df <- dataset %>% 
   mutate( isEmailValidFromRegex = as.integer(str_detect(Email, pattern)) )
