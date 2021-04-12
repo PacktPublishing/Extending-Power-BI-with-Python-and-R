@@ -34,5 +34,5 @@ pattern <- str_glue(
   '^(?:{regex_dates_having_day_31}|{regex_non_leap_dates_having_days_29_30}|{regex_leap_dates_having_day_29}|{regex_remaining_dates})$'
 )
 
-df <- df %>% 
+df <- dataset %>% 
   mutate( isDateValidFromRegex = as.integer(str_detect(BannedDate, pattern)) )
