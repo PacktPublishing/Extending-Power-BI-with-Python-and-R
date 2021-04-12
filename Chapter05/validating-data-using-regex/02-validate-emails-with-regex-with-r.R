@@ -11,4 +11,4 @@ pattern <- str_glue(
 )
 
 df <- df %>% 
-  mutate( isValidRegex = as.integer(str_detect(Email, pattern)) )
+  mutate( isEmailValidFromRegex = as.integer(str_detect(Email, pattern)) )

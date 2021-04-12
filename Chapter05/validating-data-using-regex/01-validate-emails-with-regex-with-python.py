@@ -9,4 +9,4 @@ regex_domain_ip_address = r'(\[?[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\]
 
 pattern = r'^({0})@({1}|{2})$'.format(regex_local_part, regex_domain_name, regex_domain_ip_address)
 
-df['isValidRegex'] = df['Email'].str.match(pattern).astype(int)
+df['isEmailValidFromRegex'] = df['Email'].str.match(pattern).astype(int)

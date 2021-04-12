@@ -1,0 +1,5 @@
+UserId,Email,BannedDate,IsEmailValidByDefinition,IsDateValidByDefinition,isValidDateFromRegex
+5,example@example.com --> check,02/29/18,0,0,0
+7,email@example.co.jp,012/05/2018,1,0,0
+13,.@example.com,04/24/018,0,0,0
+19,email@[123.123.123.123],06/31/2017,1,0,0
