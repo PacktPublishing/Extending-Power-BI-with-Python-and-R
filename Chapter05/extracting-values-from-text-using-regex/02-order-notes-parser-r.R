@@ -11,7 +11,7 @@ library(namedCapture)
 
 
 # Define a regex for the information (variables) contained in each row of the log
-currency_regex  <- '(?:EUR|\u20ac)'
+currency_regex  <- '(?:EUR|\u20ac)' # \u20ac is the unicode representation of '€'
 amount_regex    <- r'{(?P<RefundAmount>\d{1,}\.?\d{0,2})}'
 reason_regex    <- r'{(?P<RefundReason>.*?)}'
 date_regex      <- r'{(?P<RefundDate>\d{2}[\-\/]\d{2}[\-\/]\d{4})}'
