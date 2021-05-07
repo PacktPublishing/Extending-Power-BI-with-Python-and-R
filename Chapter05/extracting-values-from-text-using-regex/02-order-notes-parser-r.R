@@ -1,4 +1,5 @@
 
+library(dplyr)
 library(stringr)
 library(tibble)
 library(namedCapture)
@@ -10,7 +11,7 @@ library(namedCapture)
 
 
 # Define a regex for the information (variables) contained in each row of the log
-currency_regex  <- r'{(?:EUR|€)}'
+currency_regex  <- '{(?:EUR|\u20ac)}'
 amount_regex    <- r'{(?P<RefundAmount>\d{1,}\.?\d{0,2})}'
 reason_regex    <- r'{(?P<RefundReason>.*?)}'
 date_regex      <- r'{(?P<RefundDate>\d{2}[\-\/]\d{2}[\-\/]\d{4})}'
