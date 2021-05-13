@@ -1,0 +1,121 @@
+full_address,address,city,state,zip,lat_true,lon_true,diff_level
+"200 K St NE, Washington DC, 20002",200 K St NE, Washington DC,DC,20002,38.903155,-77.003274,1
+"200 K St North East, Washington DC, 20002",200 K St North East, Washington DC,DC,20002,38.903155,-77.003274,2
+"200 K St Northeast,  DC",200 K St Northeast,,DC,,38.903155,-77.003274,3
+"500 L'enfant Plaza SW, Washington DC, 200024",500 L'enfant Plaza SW, Washington DC,DC,20024,38.883266,-77.023265,1
+"500 Lenfant Plaza SW, Washington DC, 200024",500 Lenfant Plaza SW, Washington DC,DC,20024,38.883266,-77.023265,2
+"500 Lenfant Plaza SW, DC",500 Lenfant Plaza SW,,DC,,38.883266,-77.023265,3
+"2197 Plumleigh Dr, Fremont, CA, 94539",2197 Plumleigh Dr, Fremont, CA,94539,37.540095,-121.948688,1
+"2197 Plumleegh Dr, Fremont, CA, 94539",2197 Plumleegh Dr, Fremont, CA,94539,37.540095,-121.948688,2
+"2197 Plumleegh Dr, Fremon",2197 Plumleegh Dr, Fremon,,,37.540095,-121.948688,3
+"5034 Curtis St, Fremont, CA 94538",5034 Curtiss St, Fremont,CA,94538,37.52392,-121.977192,1
+"5034 Curtiss St, Fremont, CA 94538",5034 Curtiss St, Fremont,CA,94538,37.52392,-121.977192,2
+"5034 Curtiss St, Fremont",5034 Curtiss St, Fremont,,,37.52392,-121.977192,3
+"51 S Washington St, Sonora, CA 95370",51 S Washington St, Sonora,CA,95370,37.984795,-120.382825,1
+"51 S Washingtn St, Sonora, CA 95370",51 S Washingtn St, Sonora,CA,95370,37.984795,-120.382825,2
+"51 S Washingtn St, Sonora",51 S Washingtn St, Sonora,,,37.984795,-120.382825,3
+"214 N Horne, Mesa, AZ 85203",214 N Horne, Mesa,AZ,85203,33.419146,-111.814309,1
+"214 North Horn, Mesa, AZ 85203",214 North Horn, Mesa,AZ,85203,33.419146,-111.814309,2
+"214 North Horn, Mesa",214 North Horn, Mesa,,,33.419146,-111.814309,3
+"712 Cumberland St Dallas, TX 75203",712 Cumberland St, Dallas,TX,75203,32.738882,-96.82017,1
+"712 Cumburlend St Dallas, TX 75203",712 Cumburlend St, Dallas,TX,75203,32.738882,-96.82017,2
+712 Cumburlend St Dallas,712 Cumburlend St, Dallas,,,32.738882,-96.82017,3
+"2003 Kraft St, Dallas, TX 75212",2003 Kraft St, Dallas,TX,75212,32.784307,-96.85366,1
+"2003 Craft St, Dallas, TX 75212",2003 Craft St, Dallas,TX,75212,32.784307,-96.85366,2
+"2003 Craft St, Dallas",2003 Craft St, Dallas,,,32.784307,-96.85366,3
+"8041 S Yates Blvd, Chicago, IL 60617",8041 S Yates Blvd, Chicago,IL,60617,41.748695,-87.565905,1
+"8041 South Yates Blv Chicago, IL 60617",8041 South Yates Blv, Chicago,IL,60617,41.748695,-87.565905,2
+"8041 South Yates Blv Chicago, IL",8041 South Yates Blv, Chicago,IL,,41.748695,-87.565905,3
+"1509 W Erie St, Chicago, IL 60642",1509 W Erie St, Chicago,IL,60642,41.893168,-87.666076,1
+"1509 West Eerie St, Chicago, IL 60642",1509 West Eerie St, Chicago,IL,60642,41.893168,-87.666076,2
+"1509 West Eerie St, Chicago",1509 West Eerie St, Chicago,,,41.893168,-87.666076,3
+"231 Northampton St, Boston, MA 02118",231 Northampton St, Boston, MA,2118,42.338557,-71.080521,1
+"231 North Hampton St, Boston, MA 02118",231 North Hampton St, Boston, MA,2118,42.338557,-71.080521,2
+"231 North Hampton St, Boston",231 North Hampton St, Boston,,,42.338557,-71.080521,3
+"108 Farquhar St Boston, MA 02131",108 Farquhar St ,Boston,MA,2131,42.291183,-71.138561,1
+"108 Farquar St Boston, MA 02131",108 Farquar St ,Boston,MA,2131,42.291183,-71.138561,2
+108 Farquar St Boston,108 Farquar St ,Boston,,,42.291183,-71.138561,3
+"1046 Ashby Grove SW, Atlanta, GA 30314",1046 Ashby Grove SW, Atlanta,GA,30314,33.749711,-84.422066,1
+"1046 Ashby-Grove South West, Atlanta, GA 30314",1046 Ashby-Grove South West, Atlanta,GA,30314,33.749711,-84.422066,2
+"1046 Ashby-Grove South West, Atlanta",1046 Ashby-Grove South West, Atlanta,,,33.749711,-84.422066,3
+"5524 Cascade Run SW, Atlanta, GA 30336",5524 Cascade Run SW, Atlanta,GA,30336,33.726476,-84.568232,1
+"5524 Cascade Rn South West, Atlanta, GA 30336",5524 Cascade Rn South West, Atlanta,GA,30336,33.726476,-84.568232,2
+"5524 Cascade Rn South West, Atlanta, GA",5524 Cascade Rn South West, Atlanta,GA,,33.726476,-84.568232,3
+"1723 Newcastle St, Charlotte, NC 28216",1723 Newcastle St, Charlotte,NC,28216,35.257448,-80.84416,1
+"1723 New Castle St, Charlotte, NC 28216",1723 New Castle St, Charlotte,NC,28216,35.257448,-80.84416,2
+"1723 New Castle St, Charlotte",1723 New Castle St, Charlotte,,,35.257448,-80.84416,3
+"3328 Ritch Avenue, Charlotte, NC 28206",3328 Ritch Avenue, Charlotte,NC,28206,35.252044,-80.806139,1
+"3328 Rich Avenue, Charlotte, NC 28206",3328 Rich Avenue, Charlotte,NC,28206,35.252044,-80.806139,2
+"3328 Rich Avenue, Charlotte",3328 Rich Avenue, Charlotte,,,35.252044,-80.806139,3
+"4030 Irving Street, Philadelphia, PA, 19104",4030 Irving Street, Philadelphia, PA,19104,39.952417,-75.204213,1
+"4030 Erving Street, Philadelphia, PA, 19104",4030 Erving Street, Philadelphia, PA,19104,39.952417,-75.204213,2
+"4030 Erving Street, Philadelphia",4030 Erving Street, Philadelphia,,,39.952417,-75.204213,3
+"3901 Locust Walk, Philadelphia, PA, 19104",3901 Locust Walk, Philadelphia, PA,19104,39.953164,-75.201342,1
+"3901 Locast Walk, Philadelphia, PA, 19104",3901 Locast Walk, Philadelphia, PA,19104,39.953164,-75.201342,2
+"3901 Locast, Philadelphia",3901 Locast, Philadelphia,,,39.953164,-75.201342,3
+"1261 Victorian Cir, Greenfield, CA 93927",1261 Victorian Cir, Greenfield,CA,93927,36.315462,-121.25725,1
+"1261 Victoria Circle, Greenfield, CA 93927",1261 Victoria Circle, Greenfield,CA,93927,36.315462,-121.25725,2
+"1261 Victoria Circle, Greenfield",1261 Victoria Circle, Greenfield,,,36.315462,-121.25725,3
+"57086 Lakeview Rd Baker, CA 92309",57086 Lakeview Rd,Baker,CA,92309,35.280814,-116.055862,1
+"57086 Lake View Rd Baker, CA 92309",57086 Lake View Rd, Baker,CA,92309,35.280814,-116.055862,2
+57086 Lake View Rd Baker,57086 Lake View Rd, Baker,,,35.280814,-116.055862,3
+"3813 Evanston Ave N, Seattle, WA 98103",3813 Evanston Ave N, Seattle,WA,98103,47.653205,-122.351533,1
+"3813 Evanson Ave North, Seattle, WA 98103",3813 Evanson Ave North, Seattle,WA,98103,47.653205,-122.351533,2
+"3813 Evanson Ave North, Seattle",3813 Evanson Ave North, Seattle,,,47.653205,-122.351533,3
+"1611 9th Ave W, Seattle, WA 98119",1611 9th Ave W, Seattle,WA,98119,47.633931,-122.369473,1
+"1611 9 Ave West, Seattle, WA 98119",1611 9 Ave West, Seattle,WA,98119,47.633931,-122.369473,2
+"1611 9 Ave West, Seattle",1611 9 Ave West, Seattle,,,47.633931,-122.369473,3
+"102 Grand Ave, Emmetsburg, IA 50536",102 Grand Ave, Emmetsburg,IA,50536,43.118964,-94.674725,1
+"102 Grand Ave, Emmetsbug, IA 50536",102 Grand Ave, Emmetsbug,IA,50536,43.118964,-94.674725,2
+"102 Grand Ave, Emmetsbug",102 Grand Ave, Emmetsbug,,,43.118964,-94.674725,3
+"5630 St Bernard Ave, New Orleans, LA 70122",5630 St Bernard Ave, New Orleans,LA,70122,30.014462,-90.08223,1
+"5630 Saint Bernad Ave, New Orleens, LA 70122",5630 Saint Bernad Ave, New Orleens,LA,70122,30.014462,-90.08223,2
+"5630 Saint Bernad Ave, New Orleens",5630 Saint Bernad Ave, New Orleens,,,30.014462,-90.08223,3
+"1944 Charbonnet St, New Orleans, LA 70117",1944 Charbonnet St, New Orleans,LA,70117,29.969881,-90.011238,1
+"1944 Charbonney St, New Orleans, LA 70117",1944 Charbonney St, New Orleans,LA,70117,29.969881,-90.011238,2
+"1944 Charbonney St, New Orleans",1944 Charbonney St, New Orleans,,,29.969881,-90.011238,3
+"56 W Esther St Orlando, FL 32806",56 W Esther St, Orlando,FL,32806,28.519092,-81.378242,1
+"56 W Ester St Orlanto, FL 32806",56 W Ester St, Orlanto,FL,32806,28.519092,-81.378242,2
+56 W Ester St Orlanto,56 W Ester St, Orlanto,,,28.519092,-81.378242,3
+"1219 Eastin Ave, Orlando, FL 32804",1219 Eastin Ave, Orlando,FL,32804,28.561887,-81.388073,1
+"1219 Estin Ave, Orlando, FL 32804",1219 Estin Ave, Orlando,FL,32804,28.561887,-81.388073,2
+"1219 Estin Ave, Orlando",1219 Estin Ave, Orlando,,,28.561887,-81.388073,3
+"1447 NW 68th St, Miami, FL 33147",1447 NW 68th St, Miami,FL,33147,25.836276,-80.222157,1
+"1447 N W 68 St, Miami, FL 33147",1447 N W 68 St, Miami,FL,33147,25.836276,-80.222157,2
+"1447 N W 68 St, Miami",1447 N W 68 St, Miami,,,25.836276,-80.222157,3
+"3076 Jefferson St, Miami, FL 33133",3076 Jefferson St, Miami,FL,33133,25.735859,-80.233907,1
+"3076 Jefferson St, Miam, FL 33133",3076 Jefferson St, Miam,FL,33133,25.735859,-80.233907,2
+"3076 Jefferson St, Miam",3076 Jefferson St, Miam,,,25.735859,-80.233907,3
+"3541 Barbourville Rd, London, KY 40744",3541 Barbourville Rd, London,KY,40744,37.067583,-84.036329,1
+"3541 Barborville Rd, London, KY 40744",3541 Barborville Rd, London,KY,40744,37.067583,-84.036329,2
+"3541 Barborville Rd, London",3541 Barborville Rd, London,,,37.067583,-84.036329,3
+"221 S 4th St, Montevideo, MN 56265",221 S 4th St, Montevideo,MN,56265,44.943761,-95.722068,1
+"221 S 4, Montevideo, MN 56265",221 S 4, Montevideo,MN,56265,44.943761,-95.722068,2
+"221 S 4, Montevideo, 56265 ",221 S 4, Montevideo,,56265,44.943761,-95.722068,3
+"738 S Thurmond St, Sheridan, WY 82801",738 S Thurmond St, Sheridan,WY,82801,44.790306,-106.960275,1
+"738 S Turmond St, Sheridian, WY 82801",738 S Turmond St, Sheridian,WY,82801,44.790306,-106.960275,2
+"738 S Turmond St, Sheridian",738 S Turmond St, Sheridian,,,44.790306,-106.960275,3
+"33 Red Shadow Circle, Kanab, UT 84741",33 Red Shadow Circle, Kanab,UT,84741,37.037379,-112.528304,1
+"33 Shadow Circle, Kanab, UT 84741",33 Shadow Circle, Kanab,UT,84741,37.037379,-112.528304,2
+"33 Shadow Circle, 84741",33 Shadow Circle,,,84741,37.037379,-112.528304,3
+"923 Bush St, Carlin, NV 89822",923 Bush St, Carlin,NV,89822,40.716943,-116.106451,1
+"923 Bush S, Carlin, NV 89822",923 Bush S, Carlin,NV,89822,40.716943,-116.106451,2
+"923 Bush S, Carlin, Neavada",923 Bush S, Carlin, Neavada,,40.716943,-116.106451,3
+"540 S 8th Ave, Broken Bow, NE 68822",540 S 8th Ave, Broken Bow,NE,68822,41.401017,-99.639028,1
+"540 S 8 Av, Broken Bow, NE 68822",540 S 8 Av, Broken Bow,NE,68822,41.401017,-99.639028,2
+"540 S 8 Av, Broken Bow",540 S 8 Av, Broken Bow,,,41.401017,-99.639028,3
+"531 N Manhattan Ave, Manhattan, KS 66502",531 N Manhattan Ave, Manhattan,KS,66502,39.184918,-96.576755,1
+"531 N Manhatan Ave, Manhatan, KS 66502",531 N Manhatan Ave, Manhatan,KS,66502,39.184918,-96.576755,2
+"531 N Manhatan Ave, Manhatan",531 N Manhatan Ave, Manhatan,,,39.184918,-96.576755,3
+"198 Katahdin Ave, Millinocket, ME 04462",198 Katahdin Ave, Millinocket,ME,4462,45.656366,-68.712529,1
+"198 Katardin Ave, Millinocket, ME 04462",198 Katardin Ave, Millinocket,ME,4462,45.656366,-68.712529,2
+"198 Katardin Ave, Millinocket",198 Katardin Ave, Millinocket,,,45.656366,-68.712529,3
+"204 Lee St, Martin, TN 38237",204 Lee St, Martin,TN,38237,36.3387,-88.852664,1
+"204 Lee S, Martin, TN 38237",204 Lee S, Martin,TN,38237,36.3387,-88.852664,2
+"204 Lee S, Martin, TN",204 Lee S, Martin, TN,,36.3387,-88.852664,3
+"32149 Hidden Acre Dr, Frankford, DE 19945",32149 Hidden Acre Dr, Frankford,DE,19945,38.545788,-75.150188,1
+"32149 Hidden Acre, Frankford, DE 19945",32149 Hidden Acre, Frankford,DE,19945,38.545788,-75.150188,2
+"32149 Hidden Acre, 19945",32149 Hidden Acre,,,19945,38.545788,-75.150188,3
+"3950 Church St, Harrowsmith, ON K0H 1V0, Canada",3950 Church St, Harrowsmith, ON,K0H 1V0,44.406622,-76.663774,1
+"3950 Charch St, Harowsmith, ON K0H 1V0, Canada",3950 Charch St, Harowsmith, ON, K0H 1V0,44.406622,-76.663774,2
+"3950 Charch St, Harowsmith",3950 Charch St, Harowsmith,,,44.406622,-76.663774,3
