@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+*.pbix
+Chapter10/.vscode/settings.json
