@@ -1,9 +1,9 @@
-import pandas as pd
+import os
 import pickle
+import pandas as pd
 
-from presidio_analyzer import AnalyzerEngine, PatternRecognizer
+from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
-from presidio_anonymizer.entities import AnonymizerConfig
 
 from faker import Faker
 from faker.providers import internet
@@ -69,12 +69,13 @@ def anonymizeName(text_to_anonymize, country):
     return anonymized_result
 
 
-# For testing purpose you can load the Excel content directly here
+# For testing purpose you can load the Excel content directly here.
+# Just uncomment the following 2 lines.
 # # Load the Excel content in a dataframe
-# dataset = pd.read_excel(r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\CustomersCreditCardAttempts.xlsx')
+# dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx')
 
 # Load mapping dictionaries from PKL files if they exist, otherwise create empty dictionaries
-pkls_path = r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\pkls'
+pkls_path = r'D:\<your-path>\Chapter06\pkls'
 emails_dict_pkl_path = os.path.join(pkls_path, 'emails_dict.pkl')
 names_dict_pkl_path = os.path.join(pkls_path, 'names_dict.pkl')
 

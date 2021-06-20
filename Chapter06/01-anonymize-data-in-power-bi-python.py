@@ -1,9 +1,7 @@
 
-import pandas as pd
-
-from presidio_analyzer import AnalyzerEngine, PatternRecognizer
+from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
-from presidio_anonymizer.entities import AnonymizerConfig
+from presidio_anonymizer.entities.engine import OperatorConfig
 
 import secrets
 import string
@@ -22,10 +20,10 @@ def anonymizeEmail(text_to_anonymize):
     anonymized_results = anonymizer.anonymize(
         text=text_to_anonymize,
         analyzer_results=analyzer_results,    
-        anonymizers_config={"EMAIL_ADDRESS": AnonymizerConfig("replace", {"new_value": generateToken(20)})}
+        operators={"EMAIL_ADDRESS": OperatorConfig("replace", {"new_value": generateToken(20)})}
     )
 
-    return anonymized_results
+    return anonymized_results.text
 
 # Function used to anonymize a text containing names
 def anonymizeName(text_to_anonymize): 
@@ -34,15 +32,17 @@ def anonymizeName(text_to_anonymize):
     anonymized_results = anonymizer.anonymize(
         text=text_to_anonymize,
         analyzer_results=analyzer_results,    
-        anonymizers_config={"PERSON": AnonymizerConfig("replace", {"new_value": generateToken(20)})}
+        operators={"PERSON": OperatorConfig("replace", {"new_value": generateToken(20)})}
     )
 
-    return anonymized_results
+    return anonymized_results.text
 
 
-# For testing purpose you can load the Excel content directly here
-# # Load the Excel content in a dataframe
-# dataset = pd.read_excel(r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\CustomersCreditCardAttempts.xlsx')
+# For testing purpose you can load the Excel content directly here.
+# Just uncomment the following 3 lines.
+# Load the Excel content in a dataframe
+import pandas as pd
+dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx')
 
 
 # Initialize Presidio's analyzer and anonymizer
