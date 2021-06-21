@@ -40,9 +40,9 @@ def anonymizeName(text_to_anonymize):
 
 # For testing purpose you can load the Excel content directly here.
 # Just uncomment the following 3 lines.
-# Load the Excel content in a dataframe
-import pandas as pd
-dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx')
+# # Load the Excel content in a dataframe
+# import pandas as pd
+# dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx')
 
 
 # Initialize Presidio's analyzer and anonymizer
