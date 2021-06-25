@@ -3,7 +3,6 @@ library(stringr)
 library(spacyr)
 library(dplyr)
 library(purrr)
-library(charlatan)
 
 
 generateToken <- function(len, num_tokens = NULL) {
