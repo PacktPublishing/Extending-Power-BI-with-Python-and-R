@@ -1,0 +1,1 @@
+This folder is empty the first time you run the "03-pseudonymize-data-in-power-bi-python.py" file. After the first run you'll find the two files "emails_dict.pkl" and "names_dict.pkl" here.

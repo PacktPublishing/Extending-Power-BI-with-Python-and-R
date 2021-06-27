@@ -94,7 +94,7 @@ anonymizeNames <- function(text_to_anonymize, country) {
 
 spacy_initialize(
   model = "en_core_web_lg",
-  condaenv = r"{C:\Users\LZavarella\miniconda3\envs\presidio_env}",
+  condaenv = r"{C:\Users\<your-user-name>\miniconda3\envs\presidio_env}",
   entity = TRUE
 )
 
@@ -104,7 +104,7 @@ faker_locales_dict <- list(
 )
 
 # Load mapping lists from RDS files if they exist, otherwise create empty lists
-rds_path <- r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\RDSs}'
+rds_path <- r'{D:\<your-path>\Chapter06\RDSs}'
 
 emails_list_rds_path <- file.path(rds_path, 'emails_list.rds')
 names_list_rds_path <- file.path(rds_path , 'names_list.rds')
@@ -125,7 +125,7 @@ if (file.exists(names_list_rds_path)){
 # For testing purpose you can load the Excel content directly here
 # # Load the Excel content in a dataframe
 # library(readxl)
-# dataset <- read_xlsx(r"{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\CustomersCreditCardAttempts.xlsx}")
+# dataset <- read_xlsx(r"{D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx}")
 
 df <- dataset
 

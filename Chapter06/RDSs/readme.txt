@@ -1,0 +1,1 @@
+This folder is empty the first time you run the "04-pseudonymize-data-in-power-bi-r.R" file. After the first run you'll find the two files "emails_list.rds" and "names_list.rds" here.
