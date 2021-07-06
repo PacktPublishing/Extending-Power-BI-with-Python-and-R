@@ -4,3 +4,4 @@
 .Ruserdata
 *.pbix
 Chapter10/.vscode/settings.json
+Chapter12/R/mahalanobis-example.R
