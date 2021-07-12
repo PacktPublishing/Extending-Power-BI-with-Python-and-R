@@ -1,10 +1,11 @@
-
+import os
 import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
 
 # Load the data into a dataframe
-population_df = pd.read_csv("population.csv")
+project_folder = "C:\\Users\\LucaZavarella\\OneDrive\\MVP\\PacktBook\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-pkl-files"
+population_df = pd.read_csv(os.path.join(project_folder, "population.csv"))
 
 # Define a list of selected countries
 selected_countries = ["Italy", "Sweden", "France", "Germany"]
@@ -60,4 +61,4 @@ for c in selected_countries:
     nested_population_plots_dict[c] = fig_handle
 
 # Picle the entire plots dictionary and write it to disk
-pickle.dump( nested_population_plots_dict, open("nested_population_plots_dict.pkl", "wb") )
+pickle.dump( nested_population_plots_dict, open(os.path.join(project_folder, "nested_population_plots_dict.pkl"), "wb") )
