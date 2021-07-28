@@ -26,7 +26,7 @@ def toUncut(obj):
 
 project_folder = "D:\\<your-path>\\Chapter04\\importing-pkl-files"
 
-plots_dict = pickle.load( open(os.path.join(project_folder, "nested_population_plots_dict.pkl"), "rb") )
+plots_dict = pickle.load(open(os.path.join(project_folder, "nested_population_plots_dict.pkl"),"rb"))
 
 pickled_plots_dict = {}
 for country in plots_dict:

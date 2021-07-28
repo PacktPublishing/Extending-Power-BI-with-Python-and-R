@@ -5,7 +5,7 @@ library(dplyr)
 
 # Connect to your Azure SQL Database
 conn <- dbConnect(
-  odbc::odbc(), server = 'lucazav.database.windows.net',
+  odbc::odbc(), server = '<your-server>.database.windows.net',
   database = 'SystemsLogging', uid = '<your-username>',
   pwd = '<your-password>',
   driver = '{ODBC Driver 17 for SQL Server}'

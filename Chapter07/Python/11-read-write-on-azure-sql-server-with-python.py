@@ -31,7 +31,7 @@ conn.close()
 # Connect to your Azure SQL Database
 conn = pyodbc.connect(
     'Driver={ODBC Driver 17 for SQL Server};'
-    'Server=lucazav.database.windows.net;'
+    'Server=<your-server>.database.windows.net;'
     'Database=SystemsLogging;'
     'Uid=<your-user-name>;'
     'Pwd=<your-password>')
