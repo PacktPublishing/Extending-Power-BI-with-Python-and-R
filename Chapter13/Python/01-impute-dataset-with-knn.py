@@ -9,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 
 # %%
 # Uncomment this if not using in Power BI
-# dataset = pd.read_csv('http://bit.ly/titanic-data-csv')
+# dataset = pd.read_csv('http://bit.ly/titanic-dataset-csv')
 # dataset
 
 # %%

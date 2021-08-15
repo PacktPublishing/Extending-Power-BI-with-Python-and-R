@@ -21,7 +21,7 @@ def violinPlot(data, varx, vary, title, xlab, ylab, hue = None):
 
 # %%
 # Load the Titanic disaster dataset
-dataset_url = 'http://bit.ly/titanic-data-csv'
+dataset_url = 'http://bit.ly/titanic-dataset-csv'
 
 df = pd.read_csv(dataset_url)
 df.head()

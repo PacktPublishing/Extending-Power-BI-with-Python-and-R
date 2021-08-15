@@ -52,19 +52,19 @@ add_is_outlier_IQR <- function(data, col_name) {
 }
 
 
-yeo_johnson_transf <- function(data) {
-    
-    rec <- recipe(data, quality ~ .)
-    
-    rec <- rec %>%
-        step_center( all_numeric(), - all_outcomes() ) %>%
-        step_scale( all_numeric(), - all_outcomes() ) %>%
-        step_YeoJohnson( all_numeric(), -all_outcomes() )
-    
-    prep_rec <- prep( rec, training = data )
-    
-    res_list <- list( df_yeojohnson = bake( prep_rec, data ),
-                      lambdas = prep_rec$steps[[3]][["lambdas"]] )
+yeo_johnson_transf <- function(data, target_name) {
+  
+  rec <- recipe(data, as.formula(paste0(target_name, ' ~ .')))
+  
+  rec <- rec %>%
+    step_center( all_numeric(), - all_outcomes() ) %>%
+    step_scale( all_numeric(), - all_outcomes() ) %>%
+    step_YeoJohnson( all_numeric(), -all_outcomes() )
+  
+  prep_rec <- prep( rec, training = data )
+  
+  res_list <- list( df_yeojohnson = bake( prep_rec, data ),
+                    lambdas = prep_rec$steps[[3]][["lambdas"]] )
 }
 
 
@@ -113,7 +113,7 @@ df %>%
 # Let's apply Yeo-Johnson transformations
 # in order to remove skewness
 yeo_johnson_list <- df %>% 
-    yeo_johnson_transf()
+    yeo_johnson_transf(target_name = 'quality')
 
 df_transf <- yeo_johnson_list$df_yeojohnson
 

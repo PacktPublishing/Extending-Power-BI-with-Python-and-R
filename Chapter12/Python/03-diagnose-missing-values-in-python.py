@@ -35,7 +35,7 @@ def upsetplot_miss(data):
 
 
 # %%
-df = pd.read_csv('http://bit.ly/titanic-data-csv')
+df = pd.read_csv('http://bit.ly/titanic-dataset-csv')
 
 # %%
 msno.matrix(df)

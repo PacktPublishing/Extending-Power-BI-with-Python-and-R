@@ -8,7 +8,7 @@ library(imputeTS)
 
 
 #-- Diagnosing tabular data ----
-dataset_url <- 'http://bit.ly/titanic-data-csv'
+dataset_url <- 'http://bit.ly/titanic-dataset-csv'
 tbl <- readr::read_csv(dataset_url)
 tbl
 

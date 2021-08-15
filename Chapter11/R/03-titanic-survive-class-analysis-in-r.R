@@ -132,7 +132,7 @@ calc_corr <- function(data, row_name, col_name, numeric_replace_value = 0, theil
 
 
 # Load the Titanic disaster dataset
-dataset_url <- 'http://bit.ly/titanic-data-csv'
+dataset_url <- 'http://bit.ly/titanic-dataset-csv'
 
 tbl <- read_csv(dataset_url)
 tbl

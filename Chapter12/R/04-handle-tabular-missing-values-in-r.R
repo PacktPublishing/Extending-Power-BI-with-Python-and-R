@@ -21,7 +21,7 @@ corr_impute_missing_values <- function(df, m = 5, variables, method = c('pearson
 
 
 # Loading data
-dataset_url <- 'http://bit.ly/titanic-data-csv'
+dataset_url <- 'http://bit.ly/titanic-dataset-csv'
 tbl <- readr::read_csv(dataset_url)
 tbl
 

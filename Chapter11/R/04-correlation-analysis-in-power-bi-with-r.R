@@ -8,6 +8,7 @@ library(purrr)
 correlation_ratio <- function(categories, measurements, numeric_replace_value = 0) {
     
     measurements[is.na(measurements)] <- numeric_replace_value
+	categories <- addNA(categories)
     
     fcat <- as.numeric(categories)
     cat_num <- max(fcat)
@@ -111,7 +112,7 @@ df <- dataset %>%
 row <- data.frame(row=names(df))
 col <- data.frame(col=names(df))
 
-# Create the cross join data frame from the previous two ones
+# Create the cross join dataframe from the previous two ones
 ass <- tidyr::crossing(row, col)
 
 # Add the corr column containing correlation values
