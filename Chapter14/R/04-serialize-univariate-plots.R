@@ -10,14 +10,55 @@ library(ggpubr)
 library(cowplot)
 library(recipes)
 
-histdensity <- function(data, col_name, bins = 30) {
+
+
+yeo_johnson_transf <- function(data) {
+  
+  rec <- recipe(data, as.formula(' ~ .'))
+  
+  rec <- rec %>%
+    step_center( all_numeric() ) %>%
+    step_scale( all_numeric() ) %>%
+    step_YeoJohnson( all_numeric() )
+  
+  prep_rec <- prep( rec, training = data )
+  
+  res_list <- list( df_yeojohnson = bake( prep_rec, data ),
+                    lambdas = prep_rec$steps[[3]][["lambdas"]] )
+}
+
+
+histdensity <- function(data, col_name, col_transf_type = 'standard', bins = 30) {
+  
+  # Transform all numeric columns according to Yeo-Johnson
+  yeo_johnson_list <- data %>% 
+    yeo_johnson_transf()
+  
+  transf_data <- yeo_johnson_list$df_yeojohnson
+  
+  
+  if (col_transf_type == 'yeo-johnson') {
+    
+    col_vec <- transf_data[[col_name]]
+    col_label <- paste0('YeoJohnson(', col_name, ')')
+    
+  } else {
+    
+    col_vec <- data[[col_name]]
+    col_label <- col_name
+    
+  }
+  
+  data[[col_name]] <- col_vec
+  
   
   phist <- data %>% gghistogram(
-    x = col_name, bins = bins, color = 'black', fill = 'dodgerblue1', rug = TRUE
+    x = col_name, bins = bins, color = '#377EB8', fill = '#377EB8', alpha = .4,
+    rug = TRUE, xlab = col_label
   )
   
   pdensity <- data %>% ggdensity(
-    x = col_name, color = 'orangered3', size = 1.2, alpha = 0
+    x = col_name, color = '#E41A1C', size = 1.2, alpha = 0
   ) +
     scale_y_continuous(expand = expansion(mult = c(0, 0.05)), position = 'right')  +
     theme_half_open(11, rel_small = 1) +
@@ -34,10 +75,32 @@ histdensity <- function(data, col_name, bins = 30) {
 }
 
 
-raincloud <- function(data, col_name) {
+raincloud <- function(data, col_name, col_transf_type = 'standard') {
+  
+  # Transform all numeric columns according to Yeo-Johnson
+  yeo_johnson_list <- data %>% 
+    yeo_johnson_transf()
+  
+  transf_data <- yeo_johnson_list$df_yeojohnson
+  
+  
+  if (col_transf_type == 'yeo-johnson') {
+    
+    col_vec <- transf_data[[col_name]]
+    col_label <- paste0('YeoJohnson(', col_name, ')')
+    
+  } else {
+    
+    col_vec <- data[[col_name]]
+    col_label <- col_name
+    
+  }
+  
+  data[[col_name]] <- col_vec
+  
+  
   pbox <- ggboxplot(
     data = data,
-    #x = NA,
     y = col_name,
     width = .5, 
     outlier.shape = NA
@@ -48,13 +111,16 @@ raincloud <- function(data, col_name) {
       position = position_jitter(
         seed = 1, width = .2
       ),
-      color = 'dodgerblue1'
+      color = '#377EB8'
     ) +
     theme_minimal_vgrid(11, rel_small = 1) +
     theme(axis.title.y=element_blank(),
           axis.text.y=element_blank(),
           axis.ticks.y=element_blank(),
           axis.line.y = element_blank()) +
+    labs(
+      x = col_label
+    ) +
     coord_flip(xlim = c(1.5, NA))
   
   
@@ -65,7 +131,7 @@ raincloud <- function(data, col_name) {
       .width = 0, 
       justification = -.7, 
       point_colour = NA,
-      fill = 'dodgerblue1',
+      fill = '#377EB8',
       alpha = .5) +
     theme_half_open(11, rel_small = 1) +
     rremove('x.axis')+
@@ -86,7 +152,30 @@ raincloud <- function(data, col_name) {
 }
 
 
-barchart <- function(data, col_name, max_factors = 15) {
+barchart <- function(data, col_name, col_transf_type = 'standard', max_factors = 15) {
+  
+  # Transform all numeric columns according to Yeo-Johnson
+  yeo_johnson_list <- data %>% 
+    yeo_johnson_transf()
+  
+  transf_data <- yeo_johnson_list$df_yeojohnson
+  
+  
+  if (col_transf_type == 'yeo-johnson') {
+    
+    col_vec <- transf_data[[col_name]]
+    col_label <- paste0('YeoJohnson(', col_name, ')')
+    
+  } else {
+    
+    col_vec <- data[[col_name]]
+    col_label <- col_name
+    
+  }
+  
+  data[[col_name]] <- col_vec
+  
+  
   aggr_tbl <- data %>%
     group_by(across(all_of(col_name))) %>% 
     summarise(Freq = n()) %>%
@@ -119,44 +208,25 @@ barchart <- function(data, col_name, max_factors = 15) {
   
   aggr_to_show_tbl %>%
     ggbarplot(x = col_name, y = 'Freq',
-              color = 'black', fill = 'dodgerblue1', alpha = .5,
+              color = '#377EB8', fill = '#377EB8', alpha = .5,
               label = with(aggr_to_show_tbl, paste(Freq, paste0('(', round(Perc * 100), '%)'))),
-              lab.pos = 'out', lab.hjust = -0.2,) +
+              lab.pos = 'out', lab.hjust = -0.2, xlab = col_label) +
     coord_flip( ylim = c(0, max(aggr_to_show_tbl[['Freq']]) * 12 / 11))
   
 }
 
 
-yeo_johnson_transf <- function(data) {
-  
-  rec <- recipe(data, as.formula(' ~ .'))
-  
-  rec <- rec %>%
-    step_center( all_numeric() ) %>%
-    step_scale( all_numeric() ) %>%
-    step_YeoJohnson( all_numeric() )
-  
-  prep_rec <- prep( rec, training = data )
-  
-  res_list <- list( df_yeojohnson = bake( prep_rec, data ),
-                    lambdas = prep_rec$steps[[3]][["lambdas"]] )
-}
-
-# Transform all numeric columns according to Yeo-Johnson
-yeo_johnson_list <- tbl %>% 
-  yeo_johnson_transf()
-
-transf_tbl <- yeo_johnson_list$df_yeojohnson
-
 
 # Get data type of each column
 col_types <- sapply(tbl, class)
 
+# Define empty lists
 histodensity_lst <- list()
 barchart_lst <- list()
 histodensity_transf_lst <- list()
 barchart_transf_lst <- list()
 
+# Populate lists with plots
 for (col_name in names(col_types)) {
   
   if (col_types[col_name] %in% c('integer', 'numeric')) {
@@ -165,20 +235,18 @@ for (col_name in names(col_types)) {
     
     histodensity_lst[[col_name]] <- plot_grid(p1, p2, ncol = 1, align = 'v')
     
-    p1 <- histdensity(data = transf_tbl, col_name = col_name, bins = 30)
-    p2 <- raincloud(data = transf_tbl, col_name = col_name)
+    p1 <- histdensity(data = tbl, col_name = col_name, col_transf_type = 'yeo-johnson', bins = 30)
+    p2 <- raincloud(data = tbl, col_name = col_name, col_transf_type = 'yeo-johnson')
     
     histodensity_transf_lst[[col_name]] <- plot_grid(p1, p2, ncol = 1, align = 'v')
   }
   
   if (col_types[col_name] %in% c('integer', 'character', 'factor')) {
+    
     p <- barchart(data = tbl, col_name = col_name)
     
     barchart_lst[[col_name]] <- p
     
-    p <- barchart(data = transf_tbl, col_name = col_name)
-    
-    barchart_transf_lst[[col_name]] <- p
   }
   
 }
