@@ -1,0 +1,25 @@
+{
+    "visual": {
+        "name": "interactiveboxplots",
+        "displayName": "Interactive Boxplots",
+        "guid": "interactiveboxplots0670A6EE6FED44E29FA6C633DFB76253",
+        "visualClassName": "Visual",
+        "version": "1.0.0",
+        "description": "Interactive boxplots implemented using Plotly",
+        "supportUrl": "https://www.packtpub.com/",
+        "gitHubUrl": ""
+    },
+    "apiVersion": "3.8.0",
+    "author": {
+        "name": "Luca Zavarella",
+        "email": "lucazavarella@email.me"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": "dependencies.json",
+    "stringResources": []
+}

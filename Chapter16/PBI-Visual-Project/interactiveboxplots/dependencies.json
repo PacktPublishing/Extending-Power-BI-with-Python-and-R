@@ -1,0 +1,54 @@
+{
+  "cranPackages": [
+    {
+      "name": "ggplot2",
+      "displayName": "GG Plot 2",
+      "url": "https://cran.r-project.org/web/packages/ggplot2/index.html"
+    },
+    {
+      "name": "plotly",
+      "displayName": "Plotly",
+      "url": "https://cran.r-project.org/web/packages/plotly/index.html"
+    },
+    {
+      "name": "htmlwidgets",
+      "displayName": "HTML Widgets",
+      "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
+    },
+    {
+      "name": "xml2",
+      "displayName": "xml2",
+      "url": "https://cran.r-project.org/web/packages/xml2/index.html"
+    },
+    {
+      "name": "RColorBrewer",
+      "displayName": "RColorBrewer",
+      "url": "https://cran.r-project.org/web/packages/RColorBrewer/index.html"
+    },
+    {
+      "name": "cowplot",
+      "displayName": "cowplot",
+      "url": "https://cran.r-project.org/web/packages/cowplot/index.html"
+    },
+    {
+      "name": "dplyr",
+      "displayName": "dplyr",
+      "url": "https://cran.r-project.org/web/packages/dplyr/index.html"
+    },
+    {
+      "name": "purrr",
+      "displayName": "purrr",
+      "url": "https://cran.r-project.org/web/packages/purrr/index.html"
+    },
+    {
+      "name": "forcats",
+      "displayName": "forcats",
+      "url": "https://cran.r-project.org/web/packages/forcats/index.html"
+    },
+    {
+      "name": "recipes",
+      "displayName": "recipes",
+      "url": "https://cran.r-project.org/web/packages/recipes/index.html"
+    }
+  ]
+}

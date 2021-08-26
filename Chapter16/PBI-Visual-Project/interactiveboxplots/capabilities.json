@@ -1,0 +1,106 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "X Split Variable",
+      "description": "Integer or categorical variable used on x axis to split boxplots",
+      "kind": "GroupingOrMeasure",
+      "name": "x"
+    },
+    {
+      "displayName": "Y Quantitative Variable",
+      "description": "Numeric variable (integer or double) used on y axis, the distribution of which is represented by boxplots",
+      "kind": "GroupingOrMeasure",
+      "name": "y"
+    },
+    {
+      "displayName": "Grouping Variable",
+      "description": "Integer or categorical variable used to group data in facets",
+      "kind": "GroupingOrMeasure",
+      "name": "grp"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "scriptResult": {
+        "dataInput": {
+          "table": {
+            "rows": {
+              "select": [
+                {
+                  "for": {
+                    "in": "x"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "y"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "grp"
+                  }
+                }
+              ],
+              "dataReductionAlgorithm": {
+                "top": {}
+              }
+            }
+          }
+        },
+        "script": {
+          "scriptProviderDefault": "R",
+          "scriptOutputType": "html",
+          "source": {
+            "objectName": "rcv_script",
+            "propertyName": "source"
+          },
+          "provider": {
+            "objectName": "rcv_script",
+            "propertyName": "provider"
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "rcv_script": {
+      "properties": {
+        "provider": {
+          "type": {
+            "text": true
+          }
+        },
+        "source": {
+          "type": {
+            "scripting": {
+              "source": true
+            }
+          }
+        }
+      }
+    },
+    "settings_variable_params": {
+      "displayName": "Variables Settings",
+      "properties": {
+        "y_transf_name": {
+          "displayName": "Y Transformation Type",
+          "description": "Type of transformation to be applied to the variable Y. The type 'Standard' indicates that no transformation is applied",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "Standard",
+                "value": "standard"
+              },
+              {
+                "displayName": "Yeo-Johnson",
+                "value": "yeo-johnson"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "suppressDefaultTitle": true
+}
