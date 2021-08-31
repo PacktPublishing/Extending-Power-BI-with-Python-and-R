@@ -63,7 +63,7 @@ def enrich_with_geocoding(passed_row, col_name):
 ####################################################################################################
 # To be set up separately for security reasons
 ####################################################################################################
-os.environ['BINGMAPS_API_KEY'] = 'AoKc_9LtNmLdAducgmDkFKwcqrg2ApEAjRjbkv2M9-jIcF2a7x4OsswPlfWaCJCo'
+os.environ['BINGMAPS_API_KEY'] = '<your-api-key>'
 ####################################################################################################
 
 base_url= "http://dev.virtualearth.net/REST/v1/Locations/"
