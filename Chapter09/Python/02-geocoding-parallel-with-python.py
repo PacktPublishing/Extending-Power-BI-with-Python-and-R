@@ -38,6 +38,11 @@ def bing_geocode_via_address(address):
     return num_resources, formattedAddress, lat, lng, text, status, url
     
 def enrich_with_geocoding(passed_row, col_name):
+    
+    # Fixed waiting time to avoid the "Too many requests" error
+    # as basic accounts are limited to 5 queries per second
+    time.sleep(3)
+    
     address_value = str(passed_row[col_name])
     
     num_resources, address_formatted, address_lat, address_lng, text, status, url = bing_geocode_via_address(address_value)
