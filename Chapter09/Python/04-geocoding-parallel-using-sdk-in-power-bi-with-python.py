@@ -27,7 +27,7 @@ def enrich_with_geocoding(passed_row, col_name):
     return passed_row
 
 
-
+# You have to previously set the API key in the environment variable
 AUTH_KEY = os.environ.get('BINGMAPS_API_KEY')
 
 ddf_orig = dd.read_csv(r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv',

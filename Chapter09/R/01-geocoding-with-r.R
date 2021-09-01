@@ -78,7 +78,7 @@ bing_geocode_via_address <- function(address) {
 ####################################################################################################
 # To be set up separately for security reasons
 ####################################################################################################
-Sys.setenv(BINGMAPS_API_KEY = "AoKc_9LtNmLdAducgmDkFKwcqrg2ApEAjRjbkv2M9-jIcF2a7x4OsswPlfWaCJCo")
+Sys.setenv(BINGMAPS_API_KEY = "<your-api-key>")
 ####################################################################################################
 
 base_url= "http://dev.virtualearth.net/REST/v1/Locations/"

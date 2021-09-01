@@ -26,7 +26,7 @@ bing_geocode_via_address <- function(address) {
 ####################################################################################################
 # To be set up separately for security reasons
 ####################################################################################################
-Sys.setenv(BINGMAPS_API_KEY = "AoKc_9LtNmLdAducgmDkFKwcqrg2ApEAjRjbkv2M9-jIcF2a7x4OsswPlfWaCJCo")
+Sys.setenv(BINGMAPS_API_KEY = "<your-api-key>")
 ####################################################################################################
 
 tbl_orig <- read_csv(r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv}',

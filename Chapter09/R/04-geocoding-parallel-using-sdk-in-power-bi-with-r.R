@@ -23,6 +23,9 @@ bing_geocode_via_address <- function(address) {
 }
 
 
+#####################################################################
+# You must set the BINGMAPS_API_KEY environment variable separately
+#####################################################################
 
 tbl_orig <- read_csv(r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv}',
                     locale = locale(encoding = 'ISO-8859-1'))
