@@ -8,4 +8,4 @@ data = {
 
 data_df = pd.DataFrame(data)
 
-data_df.to_excel(r'D:\<your-path>\Chapter07\Python\example-write.xlsx', index = False)
+data_df.to_excel(r'D:\<your-path>\Chapter07\Python\example-write.xlsx', index = False, engine='openpyxl')
