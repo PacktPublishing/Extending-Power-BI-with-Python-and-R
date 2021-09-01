@@ -4,7 +4,7 @@ import regex
 
 # # For debugging purpose
 # # To load an xlsx file in Python, you need to install also the package: openpyxl
-# dataset = pd.read_excel (r'D:\<your>\<local>\<path>\OrderNotes.xlsx')
+# dataset = pd.read_excel (r'D:\<your>\<local>\<path>\OrderNotes.xlsx', engine='openpyxl')
 
 # Define a regex for the information (variables) contained in each row of the log
 currency_regex  = r'(?:EUR|€)'

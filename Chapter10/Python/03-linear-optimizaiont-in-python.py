@@ -7,15 +7,15 @@ import pulp as plp
 # %%
 # Import data from the Excel file
 warehouse_supply_df = pd.read_excel(r'D:\<your-path>\Chapter10\RetailData.xlsx',
-                                    sheet_name='Warehouse Supply')
+                                    sheet_name='Warehouse Supply', engine='openpyxl')
 warehouse_supply = warehouse_supply_df['product_qty'].to_numpy()
 
 country_demands_df = pd.read_excel(r'D:\<your-path>\Chapter10\RetailData.xlsx',
-                                   sheet_name='Country Demand')
+                                   sheet_name='Country Demand', engine='openpyxl')
 country_demands = country_demands_df['product_qty'].to_numpy()
 
 cost_matrix_df = pd.read_excel(r'D:\<your-path>\Chapter10\RetailData.xlsx',
-                               sheet_name='Shipping Cost')
+                               sheet_name='Shipping Cost', engine='openpyxl')
 
 n_warehouses = cost_matrix_df.nunique()['warehouse_name']
 n_countries = cost_matrix_df.nunique()['country_name']

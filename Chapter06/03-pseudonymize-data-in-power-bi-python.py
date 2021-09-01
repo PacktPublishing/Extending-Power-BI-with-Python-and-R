@@ -72,7 +72,7 @@ def anonymizeName(text_to_anonymize, country):
 # For testing purpose you can load the Excel content directly here.
 # Just uncomment the following 2 lines.
 # # Load the Excel content in a dataframe
-# dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx')
+# dataset = pd.read_excel(r'D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx', engine='openpyxl')
 
 # Load mapping dictionaries from PKL files if they exist, otherwise create empty dictionaries
 pkls_path = r'D:\<your-path>\Chapter06\pkls'

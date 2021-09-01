@@ -17,7 +17,7 @@ def airportLatLongList(df, iata_code):
     return df[df['iata_code'] == iata_code][['latitude','longitude']].values.tolist()[0]
 
 # %%
-hotels_df = pd.read_excel(r'D:\<your-path>\Chapter10\hotels-ny.xlsx')
+hotels_df = pd.read_excel(r'D:\<your-path>\Chapter10\hotels-ny.xlsx', engine='openpyxl')
 hotels_df.head()
 
 # %%
