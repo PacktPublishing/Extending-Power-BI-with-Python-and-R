@@ -60,9 +60,11 @@ bing_geocode_via_address <- function(address) {
     
   } else {
     
-    httpStatusErrorsContent <- content( GET('https://cdn.unreal-designs.co.uk/cont/statusMsg/'), "text", encoding = "UTF-8" )
+	# Get HTTP error messages
+    httpStatusErrorsContent <- content( GET('https://raw.githubusercontent.com/PacktPublishing/Extending-Power-BI-with-Python-and-R/main/Chapter09/httpStatusMsgs.json'), "text", encoding = "UTF-8" )
     http_status_errors_json <- fromJSON(httpStatusErrorsContent)
     
+	# Get current error message
     err <- http_status_errors_json[[as.character(r$status_code)]]$message
     
     details_lst <- list(
