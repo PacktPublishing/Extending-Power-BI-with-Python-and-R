@@ -6,7 +6,7 @@ import seaborn as sb
 
 # %%
 def distPlot(data, var, title, xlab, ylab, bins=100):
-    hplot = sb.distplot(data[var], kde=False, bins=bins)
+    hplot = sb.displot(data[var], kde=False, bins=bins)
     plt.title(title, fontsize=18)
     plt.xlabel(xlab, fontsize=16)
     plt.ylabel(ylab, fontsize=16)

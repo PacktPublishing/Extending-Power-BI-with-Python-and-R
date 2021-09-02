@@ -11,7 +11,7 @@ from dython.nominal import associations
 
 # %%
 def violinPlot(data, varx, vary, title, xlab, ylab, hue = None):
-    hplot = sb.violinplot(varx, vary, hue=hue, split=(hue is not None), data=data)
+    hplot = sb.violinplot(x=varx, y=vary, hue=hue, split=(hue is not None), data=data)
     plt.title(title, fontsize=18)
     plt.xlabel(xlab, fontsize=16)
     plt.ylabel(ylab, fontsize=16)
@@ -84,6 +84,9 @@ violinPlot(data=t1, varx='topic', vary='score',
            title='', xlab='',ylab='')
 
 # %%
+correlation_ratio(categories=t1['topic'], measurements=t1['score'])
+
+# %%
 t2 = pd.DataFrame(
     {
         'topic': ['Algebra','Algebra','Algebra','Algebra','Algebra','Geometry','Geometry','Geometry','Geometry','Statistics','Statistics','Statistics','Statistics','Statistics','Statistics'],
@@ -95,8 +98,14 @@ violinPlot(data=t2, varx='topic', vary='score',
            title='', xlab='',ylab='')
 
 # %%
+correlation_ratio(categories=t2['topic'], measurements=t2['score'])
+
+# %%
 # Calculate correlation coefficients for a Pandas dataframe regardless column data types
-ass = associations(df, theil_u=False, figsize=(10,10), clustering=True)
+ass = associations(df, nom_nom_assoc = 'theil', num_num_assoc = 'pearson',
+                   figsize=(10,10), clustering=True)
 
 # %%
 ass['corr']
+
+# %%
