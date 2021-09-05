@@ -32,7 +32,7 @@ gg_miss_var(tbl)
 
 
 # Which combinations of variables occur to be missing together?
-gg_miss_upset(tbl)
+gg_miss_upset(tbl, text.scale = 2)
 
 
 
