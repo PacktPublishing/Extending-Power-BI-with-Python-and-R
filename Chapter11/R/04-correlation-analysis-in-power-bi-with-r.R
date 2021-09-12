@@ -99,13 +99,17 @@ calc_corr <- function(data, row_name, col_name, numeric_replace_value = 0, theil
 
 }
 
+# # In case of debug on RStudio
+# dataset_url <- 'http://bit.ly/titanic-dataset-csv'
+# dataset <- readr::read_csv(dataset_url)
+
 # Make sure the expected data types are correct
 cat_cols <- c('Survived', 'Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked')
 num_cols <- c('PassengerId', 'Age', 'SibSp', 'Parch', 'Fare')
 
 df <- dataset %>% 
-    mutate( across(cat_cols, as.factor) ) %>%
-    mutate( across(num_cols, as.numeric) )
+    mutate( across(all_of(cat_cols), as.factor) ) %>%
+    mutate( across(all_of(num_cols), as.numeric) )
 
 # Create two data frames having the only column containing
 # the dataframe column names as values
