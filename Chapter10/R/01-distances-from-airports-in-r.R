@@ -52,3 +52,4 @@ hotels_tbl <- hotels_tbl %>%
     ) %>%
     select( -p1 )
 
+hotels_tbl
