@@ -5,7 +5,8 @@ from dython.nominal import associations
 
 
 # Calculate the correlations for the 'dataset' dataframe
-corr_df = associations(dataset, theil_u=False, figsize=(10,10), clustering=True)['corr']
+corr_df = associations(dataset, nom_nom_assoc = 'theil', num_num_assoc = 'pearson', 
+                       figsize=(10,10), clustering=True)['corr']
 
 # Transform the resulting correlation dataframe in its 'long' form
 dim_corr = corr_df.shape[0]
