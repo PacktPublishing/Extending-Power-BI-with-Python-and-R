@@ -148,7 +148,7 @@ tbl
 rstatix::cramer_v(x=tbl$Survived, y=tbl$Pclass)
 
 # Let's verify that Cramér's V is a symmetric function
-rstatix::cramer_v(x=tbl$Survived, y=tbl$Pclass) == cramer_v(x=tbl$Pclass, y=tbl$Survived)
+rstatix::cramer_v(x=tbl$Survived, y=tbl$Pclass) == rstatix::cramer_v(x=tbl$Pclass, y=tbl$Survived)
 
 
 # You can also draw a mosaic plot for these variables
