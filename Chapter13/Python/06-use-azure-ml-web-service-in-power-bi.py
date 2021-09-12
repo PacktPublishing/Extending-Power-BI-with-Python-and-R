@@ -1,12 +1,12 @@
 
-# %%
+
 import urllib.request
 import json
 import pandas as pd
 from pycaret.classification import *
 
 
-# %%
+
 def consumeAzureMLEndpoint(url, api_key, obs_df):
     # Request data goes here
     json_records_str = obs_df.to_json(orient='records')
@@ -34,11 +34,13 @@ def consumeAzureMLEndpoint(url, api_key, obs_df):
     
     return result
 
-# %%
+
 url = '<your-endpoint-url>'
+# For security reasons you can set the key in an environment variable
+# and the get it from there in this script. For simplicity we define it here directly.
 api_key = '<your-endpoint-key>' # Replace this with the API key for the web service
 
-# %%
+
 # Uncomment this code if you're not using it in Power BI
 # in order to load the imputed test dataset
 # dataset = pd.read_csv(r'C:\<your-path>\Chapter13\titanic-test.csv',
@@ -46,12 +48,12 @@ api_key = '<your-endpoint-key>' # Replace this with the API key for the web serv
 
 obs = dataset.drop('Survived',axis=1)
 
-# %%
+
 predictions = consumeAzureMLEndpoint(url, api_key, obs)
 predictions
 
-# %%
+
 scored_df = pd.concat([dataset, predictions],axis=1)
 scored_df
 
-# %%
+

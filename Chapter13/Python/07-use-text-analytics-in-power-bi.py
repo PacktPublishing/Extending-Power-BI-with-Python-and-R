@@ -1,10 +1,8 @@
-
-# %%
 import pandas as pd
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
 
-# %%
+
 def authenticate_client():
     ta_credential = AzureKeyCredential(key)
     text_analytics_client = TextAnalyticsClient(
@@ -49,16 +47,18 @@ def sentimentOfColumn(df,col_name):
     
     return pd.concat([df,sentiment_df],axis=1)
 
-# %%
+
 # Uncomment this if not using in Power BI
 # dataset = pd.read_csv(r'C:\<your-path>\Chapter13\FabrikamComments.csv')
 # dataset
 
-# %%
-key = "<your-text-analytics-key>"
 endpoint = "<your-text-analytics-url>"
+# For security reasons you can set the key in an environment variable
+# and the get it from there in this script. For simplicity we define it here directly.
+key = "<your-text-analytics-key>"
+
 
 sentiment_enriched_df = sentimentOfColumn(dataset, col_name='comment')
 sentiment_enriched_df
 
-# %%
+

@@ -1,11 +1,10 @@
-# %%
 import pickle
 import re
 import os
 import pandas as pd
 from pycaret.classification import *
 
-# %%
+
 def serialize(obj):
     return obj.encode('latin1')
 
@@ -80,7 +79,7 @@ def serializeModelsToStringDataframe(models_dict):
 
     return model_ids_df, models_df
 
-# %%
+
 project_folder = r'C:\<your-path>\Chapter13\Python'
 
 # In this case we have only one model. So let's unserialize it as model_01.
@@ -91,7 +90,7 @@ model_01 = load_model(os.path.join(project_folder, "titanic-model"))
 models_dict = {}
 models_dict['model01'] = model_01
 
-# %%
+
 # Get the dataframe of model IDs and the dataframe of serialized models
 model_ids_df, models_df = serializeModelsToStringDataframe(models_dict)
 
