@@ -1,3 +1,5 @@
+# THIS SCRIPT IS SUPPOSED TO RUN IN A JUPYTER NOTEBOOK (WE USED VS CODE)
+
 # %%
 import pandas as pd
 from pycaret.classification import *

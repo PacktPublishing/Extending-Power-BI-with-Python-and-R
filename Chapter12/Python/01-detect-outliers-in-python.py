@@ -1,3 +1,5 @@
+# THIS SCRIPT IS SUPPOSED TO RUN IN A JUPYTER NOTEBOOK (WE USED VS CODE)
+
 # %%
 import pandas as pd
 import numpy as np
@@ -83,7 +85,8 @@ boxPlot(df_no_outliers, varx='quality', vary='sulphates',
         xlab='sulphates', ylab=None)
 
 # %%
-# Let's plot an histogram for all the variables
+# Let's now plot an histogram for all the variables
+# using the original dataset
 df.drop('quality', axis=1).hist(figsize=(10,10))
 plt.tight_layout()
 plt.show()

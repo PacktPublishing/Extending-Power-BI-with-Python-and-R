@@ -1,3 +1,5 @@
+# THIS SCRIPT IS SUPPOSED TO RUN IN A JUPYTER NOTEBOOK (WE USED VS CODE)
+
 # %%
 import pandas as pd
 import numpy as np
@@ -58,6 +60,8 @@ theils_u(df['Pclass'], df['Survived'])
 violinPlot(data=df, varx='Pclass', vary='Age',
            title='Passenger age VS Passenger class',
            xlab='Pclass', ylab='Age')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 # You can also show the distribution of a third dimension (in this case Survived)
@@ -65,6 +69,8 @@ violinPlot(data=df, varx='Pclass', vary='Age',
 violinPlot(data=df, varx='Pclass', vary='Age', hue='Survived',
            title='Passenger age VS Passenger class',
            xlab='Pclass', ylab='Age')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 # Let's calculate the correlation ratio between the categorical variable Pclass and
@@ -82,6 +88,8 @@ t1 = pd.DataFrame(
 
 violinPlot(data=t1, varx='topic', vary='score',
            title='', xlab='',ylab='')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 correlation_ratio(categories=t1['topic'], measurements=t1['score'])

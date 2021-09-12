@@ -1,3 +1,5 @@
+# THIS SCRIPT IS SUPPOSED TO RUN IN A JUPYTER NOTEBOOK (WE USED VS CODE)
+
 # %%
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,14 +34,20 @@ df.head()
 # %%
 distPlot(data=df, var='lifeExp', title='Life Expectancy',
          xlab='Life Expectancy (years)', ylab='Frequency')
-
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
+ 
 # %%
 distPlot(data=df, var='gdpPercap', title='GDP / capita',
          xlab='GDP / capita ($)', ylab='Frequency')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 scatterPlot(data=df, varx='lifeExp', vary='gdpPercap',
             title='Life Expectancy vs GDP/Capita', xlab='lifeExp', ylab='gdpPercap')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 df[['lifeExp','gdpPercap']].corr(method='pearson')

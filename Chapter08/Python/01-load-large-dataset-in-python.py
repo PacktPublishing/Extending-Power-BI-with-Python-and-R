@@ -1,3 +1,5 @@
+# THIS SCRIPT IS SUPPOSED TO RUN IN A JUPYTER NOTEBOOK (WE USED VS CODE)
+
 # %%
 import os
 import pandas as pd
@@ -5,7 +7,8 @@ import dask.dataframe as dd
 from dask.diagnostics import ProgressBar
 
 # %%
-# Get the path of the folder containing all the CSV files
+# Get the path to the folder containing all the CSV files
+# (update it according to your folders structure)
 main_path = os.path.join('D:\\', 'data', 'AirOnTime', 'AirOnTimeCSVplot')
 
 # %%
