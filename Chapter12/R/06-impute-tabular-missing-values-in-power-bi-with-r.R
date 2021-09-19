@@ -2,6 +2,7 @@
 library(dplyr)
 library(ggplot2)
 library(mice)
+library(miceadds)
 
 # Function to calculate the matrix correlation of a numeric dataframe
 # also imputing missing values with MICE in a dataframe
@@ -11,8 +12,8 @@ corr_impute_missing_values <- function(df, m = 5, variables, method = c('pearson
   
   df_imp_lst <- mice(df, m = m, printFlag = FALSE)
   
-  corr_tbl <- miceadds::micombine.cor(df_imp_lst, variables = variables,
-                                      method = method) %>% 
+  corr_tbl <- micombine.cor(df_imp_lst, variables = variables,
+                            method = method) %>% 
     as_tibble() %>% 
     arrange( variable1, variable2 )
   

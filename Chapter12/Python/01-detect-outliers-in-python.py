@@ -56,13 +56,15 @@ numeric_col_names = df.drop('quality', axis=1).columns.values
 df
 
 # %%
-sb.set_theme(style="whitegrid")
+sb.set(style="whitegrid")
 
 # Let's plot sulphates boxplot in order to see if
 # there are univariate outliers
 boxPlot(df, varx='sulphates', vary=None,
         title='Sulphates distribution',
         xlab='sulphates', ylab=None)
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 # As you see there are outliers, let's add a boolean 
@@ -76,25 +78,31 @@ df_no_outliers = df.loc[~df['is_sulphates_outlier']]
 boxPlot(df_no_outliers, varx='sulphates', vary=None,
         title='Sulphates distribution without outliers',
         xlab='sulphates', ylab=None)
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 # Let's now plot boxplots for each quality vote,
 # removing the initial outliers
 boxPlot(df_no_outliers, varx='quality', vary='sulphates',
-        title='Sulphates distribution without outliers',
-        xlab='sulphates', ylab=None)
+        title='Sulphates distribution without outliers by Quality',
+        xlab='quality', ylab='sulphates')
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
+# MULTIVARIATE ANALYSIS
+#-----------------------
 # Let's now plot an histogram for all the variables
-# using the original dataset
-df.drop('quality', axis=1).hist(figsize=(10,10))
+# using the dataset without outliers
+df_no_outliers.drop('quality', axis=1).hist(figsize=(10,10))
 plt.tight_layout()
 plt.show()
 
 # %%
 # Let's apply Yeo-Johnson transformations
 # in order to remove skewness
-df_transf, lambda_arr = yeo_johnson_transf(df[numeric_col_names])
+df_transf, lambda_arr = yeo_johnson_transf(df_no_outliers[numeric_col_names])
 
 # Let's plot an histogram for all the transformed variables
 # in order to check if skewness is decreased 
@@ -118,7 +126,8 @@ plt.show()
 
 # sb.pairplot(df_transf_qual, hue='quality', diag_kind = 'kde',
 #             plot_kws = {'alpha': 0.6, 's': 80, 'edgecolor': 'k'})
-
+# # In case you're not using a Jupyter notebook run also the following:
+# # plt.show()
 # %%
 # Let's compute the squared Mahalanobis distances using
 # the Minimum Covariance Determinant to calculate a

@@ -4,7 +4,7 @@
 import pandas as pd
 import missingno as msno
 from upsetplot import UpSet
-
+import matplotlib.pyplot as plt
 
 # %%
 def miss_var_summary(data):
@@ -41,6 +41,8 @@ df = pd.read_csv('http://bit.ly/titanic-dataset-csv')
 
 # %%
 msno.matrix(df)
+# In case you're not using a Jupyter notebook run also the following:
+# plt.show()
 
 # %%
 miss_var_summary(df)
@@ -49,5 +51,10 @@ miss_var_summary(df)
 plt = upsetplot_miss(df)
 plt.plot()
 
-# %%
+# In case you're not using a Jupyter notebook run the following instead:
+# chart = upsetplot_miss(df)
+# chart.plot()
+# plt.plot = chart.plot
+# plt.show()
 
+# %%

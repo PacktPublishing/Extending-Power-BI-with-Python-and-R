@@ -100,19 +100,19 @@ boxPlot(df_no_outliers, varx='sulphates', vary=NULL, vargrp = NULL,
 
 # Let's now plot boxplots for each quality vote,
 # removing the initial outliers
-boxPlot(df, varx = 'quality', vary = 'sulphates', vargrp = 'quality',
+boxPlot(df_no_outliers, varx = 'quality', vary = 'sulphates', vargrp = 'quality',
         title = 'Sulphates distribution over quality', xlab = 'quality', ylab = 'sulphates' )
 
 
-# Let's plot an histogram for each variable
-df %>%
+# Let's plot an histogram for each variable (no outliers)
+df_no_outliers %>%
     select( numeric_col_names ) %>% 
     dataframeHist(bins = NULL)
 
 
 # Let's apply Yeo-Johnson transformations
 # in order to remove skewness
-yeo_johnson_list <- df %>% 
+yeo_johnson_list <- df_no_outliers %>% 
     yeo_johnson_transf(target_name = 'quality')
 
 df_transf <- yeo_johnson_list$df_yeojohnson
@@ -155,9 +155,6 @@ outliers_value_cutoff <- qchisq(cutoff, degrees_of_freedom) # threshold value
 data <- data %>% 
     mutate(
         
-        # Indicator column of sulphates outliers
-        is_sulphates_outlier      = df$is_sulphates_outlier,
-        
         # Indicator column of outliers detected with Mahalanobis distance
         is_mahalanobis_outlier    = distances > outliers_value_cutoff,
         
@@ -165,4 +162,5 @@ data <- data %>%
         mahalanobis_outlier_proba = pchisq(distances, ncol(data))
     )
 
-data
+data %>% 
+  filter( is_mahalanobis_outlier == TRUE )
