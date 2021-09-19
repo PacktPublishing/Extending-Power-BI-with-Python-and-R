@@ -4,7 +4,7 @@ library(ggplot2)
 
 
 # # To run this code not in Power BI you have:
-# # 1. Run all the code you can find in the file '07-create-association-objects.R'
+# # 1. Run all the code you can find in the file '09-create-association-objects.R'
 # # 2. Uncomment the following code
 # numeric_method <- 'pearson'
 # categorical_method <- 'theil'

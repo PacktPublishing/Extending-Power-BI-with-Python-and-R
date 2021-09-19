@@ -105,7 +105,7 @@ calc_corr <- function(data, row_name, col_name, numeric_replace_value = 0, metho
   
 }
 
-# Uncomment if not running on Power BI
+
 dataset <- tbl
 
 # Make sure the expected data types are correct
@@ -115,8 +115,8 @@ cat_cols <- c('Survived', 'Pclass', 'Name', 'Sex', 'Ticket',
 num_cols <- c('Age', 'Fare')
 
 df <- dataset %>% 
-  mutate( across(cat_cols, as.factor) ) %>%
-  mutate( across(num_cols, as.numeric) )
+  mutate( across(all_of(cat_cols), as.factor) ) %>%
+  mutate( across(all_of(num_cols), as.numeric) )
 
 # Create two data frames having the only column containing
 # the dataframe column names as values
@@ -136,19 +136,19 @@ plan(cluster, workers = n_cores)
 corr_tbl_pearson_theil <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'pearson', theil_uncert = T)) )
-corr_tbl_pearson_cremer <- ass %>% 
+corr_tbl_pearson_cramer <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'pearson', theil_uncert = F)) )
 corr_tbl_spearman_theil <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'spearman', theil_uncert = T)) )
-corr_tbl_spearman_cremer <- ass %>% 
+corr_tbl_spearman_cramer <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'spearman', theil_uncert = F)) )
 corr_tbl_kendall_theil <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'kendall', theil_uncert = T)) )
-corr_tbl_kendall_cremer <- ass %>% 
+corr_tbl_kendall_cramer <- ass %>% 
   mutate( corr = future_map2_dbl(row, col, ~ calc_corr(data = df, row_name = .x, col_name = .y,
                                                        method = 'kendall', theil_uncert = F)) )
 
@@ -156,11 +156,11 @@ corr_tbl_kendall_cremer <- ass %>%
 corr_tbl <- corr_tbl_pearson_theil %>%
   rename( corr_pearson_theil = corr ) %>% 
   bind_cols(
-    corr_pearson_cremer = corr_tbl_pearson_cremer$corr,
+    corr_pearson_cramer = corr_tbl_pearson_cramer$corr,
     corr_spearman_theil = corr_tbl_spearman_theil$corr,
-    corr_spearman_cremer = corr_tbl_spearman_cremer$corr,
+    corr_spearman_cramer = corr_tbl_spearman_cramer$corr,
     corr_kendall_theil = corr_tbl_kendall_theil$corr,
-    corr_kendall_cremer = corr_tbl_kendall_cremer$corr
+    corr_kendall_cramer = corr_tbl_kendall_cramer$corr
   ) %>% 
   
   # Pivot correlation coefficient columns into the new columns corr_type and corr
