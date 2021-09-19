@@ -55,7 +55,7 @@ df_imputed['Survived'] = df_imputed['Survived'].astype('int')
 # %%
 # Uncomment this if not using the code in Power BI, as the imputed dataset
 # will be used in the training code
-df_imputed.to_csv(r'C:\<your-path>\Chapter13\titanic-imputed.csv',
-                  index=False)
+# df_imputed.to_csv(r'C:\<your-path>\Chapter13\titanic-imputed.csv',
+#                   index=False)
 
 # %%
