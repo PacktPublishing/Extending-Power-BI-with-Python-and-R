@@ -40,7 +40,7 @@ def yeo_johnson_transf(data):
     pt.fit(data)
 
     lambdas = pt.lambdas_
-    df_yeojohnson = pd.DataFrame( pt.transform(df[numeric_col_names]), columns=numeric_col_names )
+    df_yeojohnson = pd.DataFrame( pt.transform(data), columns=data.columns.values )
     
     return df_yeojohnson, lambdas
 
