@@ -109,7 +109,7 @@ boxplotsGrouped <- function(data, x, y, grp, y_transf_type, x_max_factors = 6, g
             ) +
             scale_fill_brewer(palette = "Set1") +
             scale_color_brewer(palette = "Set1") +
-            theme_minimal_hgrid(11, rel_small = 1) +
+            theme_minimal() +
             theme(
                 axis.text.x = element_text(angle = 90, hjust = 1),
                 legend.position="none"
@@ -148,7 +148,7 @@ boxplotsGrouped <- function(data, x, y, grp, y_transf_type, x_max_factors = 6, g
         ) +
         scale_fill_brewer(palette = "Set1") +
         scale_color_brewer(palette = "Set1") +
-        theme_minimal_hgrid(11, rel_small = 1) +
+        theme_minimal() +
         theme(
             axis.text.x = element_text(angle = 90, hjust = 1),
             strip.background = element_rect(fill="grey85"),
