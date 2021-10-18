@@ -1,5 +1,5 @@
 # Load the dataset with proper column data types
-folder <- r'{C:\Users\LucaZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter14}'
+folder <- r'{C:\<your-path>\Chapter14}'
 init_path <- file.path(folder, r'{R\00-init-dataset.R}')
 
 if(!exists('foo', mode='function')) source(init_path)

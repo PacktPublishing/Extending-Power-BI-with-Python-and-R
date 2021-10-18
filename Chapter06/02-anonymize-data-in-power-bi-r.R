@@ -58,14 +58,14 @@ anonymizeNames <- function(text_to_anonymize) {
 # For testing purpose you can load the Excel content directly here
 # # Load the Excel content in a dataframe
 # library(readxl)
-# dataset <- read_xlsx(r"{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter06\CustomersCreditCardAttempts.xlsx}")
+# dataset <- read_xlsx(r"{D:\<your-path>\Chapter06\CustomersCreditCardAttempts.xlsx}")
 
 df <- dataset
 
 
 spacy_initialize(
   model = "en_core_web_lg",
-  condaenv = r"{C:\Users\LZavarella\miniconda3\envs\presidio_env}",
+  condaenv = r"{C:\Users\<your-username>\miniconda3\envs\presidio_env}",
   entity = TRUE
 )
 

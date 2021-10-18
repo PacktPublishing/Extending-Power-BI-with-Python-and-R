@@ -7,7 +7,7 @@ library(namedCapture)
 
 # # For debugging purpose
 # library(readxl)
-# dataset <- read_xlsx(r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter05\OrderNotes.xlsx}')
+# dataset <- read_xlsx(r'{D:\<your-path>\Chapter05\OrderNotes.xlsx}')
 
 
 # Define a regex for the information (variables) contained in each row of the log

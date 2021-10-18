@@ -4,7 +4,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 # Load the data into a dataframe
-project_folder = "C:\\Users\\LucaZavarella\\OneDrive\\MVP\\PacktBook\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-pkl-files"
+project_folder = "C:\\<your-path>\\Chapter04\\importing-pkl-files"
 population_df = pd.read_csv(os.path.join(project_folder, "population.csv"))
 
 # Define a list of selected countries

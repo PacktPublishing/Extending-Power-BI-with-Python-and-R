@@ -3,7 +3,7 @@
 import pandas as pd
 import pickle
 
-project_folder = "D:\\LZavarella\\OneDrive\\MVP\\Packt Book\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-pkl-files"
+project_folder = "D:\\<your-path>\\Chapter04\\importing-pkl-files"
 
 dataset_debug = pd.read_csv( open(os.path.join(project_folder, "input_df_python_visual.csv"), "rb") )
 

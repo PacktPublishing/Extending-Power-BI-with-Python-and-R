@@ -63,7 +63,7 @@ serializeModelsToStringDataframe <- function(models_lst) {
 
 
 
-project_folder <- r'{C:\Users\LucaZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter13\}'
+project_folder <- r'{C:\<your-path>\Chapter13\}'
 
 # In this case we have only one model. So let's unserialize it as model_01.
 # Then let's create a named list containing the models (just one in this case)

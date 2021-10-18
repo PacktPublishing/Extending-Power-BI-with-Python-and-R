@@ -29,7 +29,7 @@ bing_geocode_via_address <- function(address) {
 Sys.setenv(BINGMAPS_API_KEY = "<your-api-key>")
 ####################################################################################################
 
-tbl_orig <- read_csv(r'{D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv}',
+tbl_orig <- read_csv(r'{D:\<your-path>\Chapter09\geocoding_test_data.csv}',
                     locale = locale(encoding = 'ISO-8859-1'))
 
 tbl <- tbl_orig %>% select('full_address','lat_true','lon_true')

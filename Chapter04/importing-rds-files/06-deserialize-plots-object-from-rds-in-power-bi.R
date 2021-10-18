@@ -15,7 +15,7 @@ str_dice <- function(s, width) {
 }
 
 
-project_folder <- "D:\\LZavarella\\OneDrive\\MVP\\PacktBook\\Code\\Extending-Power-BI-with-Python-and-R\\Chapter04\\importing-rds-files"
+project_folder <- "D:\\<your-path>\\Chapter04\\importing-rds-files"
 
 # Deserialize the plots list.
 plots_lst <- readRDS( file.path(project_folder, "plots_lst.rds") )

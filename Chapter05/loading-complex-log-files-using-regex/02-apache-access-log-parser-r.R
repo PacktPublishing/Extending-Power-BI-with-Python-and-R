@@ -2,7 +2,7 @@ library(readr)
 library(namedCapture)
 
 
-access_log_lines <- read_lines('D:/LZavarella/OneDrive/MVP/PacktBook/Code/Extending-Power-BI-with-Python-and-R/Chapter05/loading-complex-log-files-using-regex/apache_logs.txt')
+access_log_lines <- read_lines('D:/<your-path>/Chapter05/loading-complex-log-files-using-regex/apache_logs.txt')
 
 
 # Define a regex for the information (variables) contained in each row of the log

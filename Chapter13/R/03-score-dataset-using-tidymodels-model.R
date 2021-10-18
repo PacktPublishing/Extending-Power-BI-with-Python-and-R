@@ -2,7 +2,7 @@ library(readr)
 library(tidymodels)
 
 
-project_folder <- r'{C:\Users\LucaZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter13\}'
+project_folder <- r'{C:\<your-path>\Chapter13\}'
 
 titanic_testing <- read_csv(file.path(project_folder, 'titanic-test.csv'))
 

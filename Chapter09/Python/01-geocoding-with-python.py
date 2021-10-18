@@ -64,7 +64,7 @@ base_url= "http://dev.virtualearth.net/REST/v1/Locations/"
 AUTH_KEY = os.environ.get('BINGMAPS_API_KEY')
 
 # %%
-df_orig = pd.read_csv(r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv',
+df_orig = pd.read_csv(r'D:\<your-path>\Chapter09\geocoding_test_data.csv',
                       encoding='latin-1')
 
 df = df_orig[['full_address','lat_true','lon_true']]

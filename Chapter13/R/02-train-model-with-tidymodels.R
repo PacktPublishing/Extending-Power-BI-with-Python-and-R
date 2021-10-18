@@ -14,7 +14,7 @@ library(dplyr)
 library(tidymodels)
 
 # Load your dataset
-project_folder <- r'{C:\Users\LucaZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter13\}'
+project_folder <- r'{C:\Users\<your-path>\Chapter13\}'
 
 # # Uncomment this code if you're not using it in Power BI
 # # in order to load the imputed Titanic dataset

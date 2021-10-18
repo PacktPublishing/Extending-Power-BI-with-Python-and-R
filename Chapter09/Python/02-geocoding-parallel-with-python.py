@@ -73,7 +73,7 @@ AUTH_KEY = os.environ.get('BINGMAPS_API_KEY')
 
 
 # %%
-ddf_orig = dd.read_csv(r'D:\LZavarella\OneDrive\MVP\PacktBook\Code\Extending-Power-BI-with-Python-and-R\Chapter09\geocoding_test_data.csv',
+ddf_orig = dd.read_csv(r'D:\<your-path>\Chapter09\geocoding_test_data.csv',
                        encoding='latin-1')
 
 ddf = ddf_orig[['full_address','lat_true','lon_true']]
