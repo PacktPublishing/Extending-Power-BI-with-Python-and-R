@@ -55,9 +55,9 @@ With the following software and hardware list you can run all code files present
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](http://www.packtpub.com/sites/default/files/downloads/9781801078207_ColorImages.pdf).
 
 ### Related products <Other books you may enjoy>
-* AWS Penetration Testing [[Packt]](https://www.packtpub.com/product/aws-penetration-testing/9781839216923) [[Amazon]](https://www.amazon.com/AWS-Penetration-Testing-Beginners-Metasploit/dp/1839216921/ref=sr_1_1?dchild=1&keywords=AWS+Penetration+Testing&qid=1635752706&sr=8-1)
+* Microsoft   Power BI Cookbook - Second Edition [[Packt]](https://www.packtpub.com/product/microsoft-power-bi-cookbook-second-edition/9781801813044) [[Amazon]](https://www.amazon.in/Microsoft-Power-Cookbook-expertise-hands-ebook/dp/B09GKHW31G/ref=sr_1_3?keywords=Microsoft+Power+BI+Cookbook&qid=1638873909&sr=8-3)
   
-* Learn Kali Linux 2019 [[Packt]](https://www.packtpub.com/free-ebook/learn-kali-linux-2019/9781789611809) [[Amazon]](https://www.amazon.com/Learn-Kali-Linux-2018-hands/dp/1789611806/ref=sr_1_1?dchild=1&keywords=Learn+Kali+Linux+2019&qid=1635752810&sr=8-1)
+* Expert Data Modeling with Power BI [[Packt]](https://www.packtpub.com/product/expert-data-modeling-with-power-bi/9781800205697) [[Amazon]](https://www.amazon.in/Expert-Data-Modeling-Power-optimized/dp/1800205694/ref=sr_1_2?keywords=Expert+Data+Modeling+with+Power+BI&qid=1638873830&sr=8-2)
 
 
   
