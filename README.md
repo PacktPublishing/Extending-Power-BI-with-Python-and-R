@@ -63,3 +63,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
   
 ## Get to Know the Author
 **Luca Zavarella** is certified as an Azure Data Scientist Associate and is also a Microsoft MVP for artificial intelligence. He graduated in computer engineering at the Faculty of Engineering of L'Aquila University, and he has more than 10 years of experience working on the Microsoft Data Platform. He started his journey as a T-SQL developer on SQL Server 2000 and 2005. He then focused on all the Microsoft Business Intelligence stack (SSIS, SSAS, SSRS), deepening data warehousing techniques. Recently, he has been dedicating himself to the world of advanced analytics and data science. He also graduated with honors in classical piano at the Conservatory "Alfredo Casella" in L'Aquila.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801078207">https://packt.link/free-ebook/9781801078207 </a> </p>
