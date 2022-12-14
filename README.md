@@ -1,3 +1,15 @@
+
+### Get this product for $5
+
+<i>Packt is having its biggest sale of the year. Get this eBook or any other book, video, or course that you like just for $5 each</i>
+
+
+<b><p align='center'>[Buy now](https://packt.link/9781801078207)</p></b>
+
+
+<b><p align='center'>[Buy similar titles for just $5](https://subscription.packtpub.com/search)</p></b>
+
+
 # 	Extending Power BI with Python and R
 
 <a href="https://www.packtpub.com/product/extending-power-bi-with-python-and-r/9781801078207"><img src="https://static.packt-cdn.com/products/9781801078207/cover/smaller" alt="Extending Power BI with Python and R" height="256px" align="right"></a>
