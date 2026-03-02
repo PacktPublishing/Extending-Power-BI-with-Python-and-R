@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.eventbrite.com/e/design-production-ready-power-bi-fabric-analytics-systems-workshop-tickets-1983351838740?aff=github'><img src='https://static.packt-cdn.com/assets/images/packt+events/workshop_PowerBI_github.jpg'/></a></p>
+
 
 
 
